@@ -7,47 +7,47 @@
 // import Tabletop from 'tabletop';
 // import Raw from "./data" ; 
 // import "./app.css"
-// class App extends Component {
-//   constructor() {
-//     super()
-//     this.state = {
-//       data: []
-//     }
-//   }
+class Tible extends Component {
+  constructor() {
+    super()
+    this.state = {
+      data: []
+    }
+  }
 
-//   componentDidMount() {
-//     Tabletop.init({
-//       key: '1bwUidK8Ok86LfHYJUnzZWvTkW7FfhHlJsHY3GdKsYpI',
-//       simpleSheet: true,
-//       callback: data => {
-//         console.log('google sheet data --->',data)
-//         console.log("----------------------------------------");
-//         this.setState({data:data})
-//       },
-//      // simpleSheet: true
-//     })
-//   }
+  componentDidMount() {
+    Tabletop.init({
+      key: '1bwUidK8Ok86LfHYJUnzZWvTkW7FfhHlJsHY3GdKsYpI',
+      simpleSheet: true,
+      callback: data => {
+        console.log('google sheet data --->',data)
+        console.log("----------------------------------------");
+        this.setState({data:data})
+      },
+     // simpleSheet: true
+    })
+  }
 
 
-//   render() {
-//     return (
-//       <div className="App">
-//         <table>
+  render() {
+    return (
+      <div className="App">
+        <table>
           
-//     {Raw.map(m => {
-//       var vals = Object.values(m)
-// return     <tr>{vals.map(d =>  <td> {d}</td>)}</tr>
+    {Raw.map(m => {
+      var vals = Object.values(m)
+return     <tr>{vals.map(d =>  <td> {d}</td>)}</tr>
     
     
-//       })}
-//         </table>
+      })}
+        </table>
       
-//       {/* {JSON.stringify(Raw)} */}
-//       </div>
-//     );
-//   }
-// }
-// export default App;
+      {/* {JSON.stringify(Raw)} */}
+      </div>
+    );
+  }
+}
+
 
 
   
@@ -67,7 +67,7 @@ class App extends Component {
         </div>
         <BrowserRouter>
           <div>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={Tible} />
             <Route path="/about" exact component={About} />
           </div>
         </BrowserRouter>
