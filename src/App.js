@@ -1,15 +1,12 @@
-import React, { Component } from "react";
+import React, { Component ,JsonTable } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import logo from "./logo.svg";
 import Home from "./components/Home";
 import About from "./components/About";
 import ReactGoogleSheets from 'react-google-sheets'; 
 import Tabletop from 'tabletop';
-
-function showInfo(data, tabletop) {
-  alert('Successfully processed!')
-  console.log(data);
-}
+import Raw from "./data" ; 
+import "./app.css"
 class App extends Component {
   constructor() {
     super()
@@ -35,6 +32,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <table>
+          
+    {Raw.map(m => {
+      var vals = Object.values(m)
+return     <tr>{vals.map(d =>  <td> {d}</td>)}</tr>
+    
+    
+      })}
+        </table>
+      
+      {/* {JSON.stringify(Raw)} */}
       </div>
     );
   }
