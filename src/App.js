@@ -1,8 +1,8 @@
-import React, { Component ,JsonTable } from "react";
-import { BrowserRouter, Route } from "react-router-dom";
-import logo from "./logo.svg";
+import React, { Component} from "react";
+// import { BrowserRouter, Route } from "react-router-dom";
+// import logo from "./logo.svg";
 //import Home from "./components/Home";
-import About from "./components/About";
+//import About from "./components/About";
 //import ReactGoogleSheets from 'react-google-sheets'; 
 //import Tabletop from 'tabletop';
 import Raw from "./data" ; 
@@ -48,12 +48,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <div>
-            <Route path="/" exact component={Tible} />
-            <Route path="/about" exact component={About} />
-          </div>
-        </BrowserRouter>
+     
+          
+       <Tible/>
+        
+  
       </div>
     );
   }
